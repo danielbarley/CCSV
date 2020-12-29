@@ -1,5 +1,5 @@
 # CCSV
-A basic C header library for reporting data in csv format.
+A basic C header only library for reporting data in csv format.
 
 ## Usage
 CCSV is a header only library that allows arrays to be printed as columns
