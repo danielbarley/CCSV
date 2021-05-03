@@ -140,6 +140,7 @@ int ccsv_print_columns(FILE *fd, int num_cols, ...) {
 				break;
 			case CCSV_ULONG:
 				print_fns[i] = &ccsv_print_ulong;
+				break;
 			case CCSV_LONGLONG:
 				print_fns[i] = &ccsv_print_longlong;
 				break;
@@ -162,7 +163,7 @@ int ccsv_print_columns(FILE *fd, int num_cols, ...) {
 
 	if (num_cols > 1) {
 		for (int i = 1; i < num_cols; ++i) {
-			if (cols[i]->len != cols[i-1]->len) {
+			if (cols[i]->len != cols[i - 1]->len) {
 				return CCSV_COLS_SIZE_NOT_EQUAL;
 			}
 		}
